@@ -1,18 +1,438 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Curso de Front-End Bootstrap</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Hello World!</h1>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <title>Curso de Front-End Bootstrap</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Botão para colapso -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!-- Link e Cabeçalho do navbar -->
+                        <a class="navbar-brand" href="#">Bootstrap Brand</a>
+                    </div>
+
+                    <!-- Coletar os links para colpase e ítens do navegador -->
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Início</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header><!-- /cabeçalho com o menu navegador -->
+
+        <main>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Grid System</h1>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                        <div class="col-md-1">col-md-1</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">col-md-6</div>
+                        <div class="col-md-6">col-md-6</div>
+                    </div>    
+                    <div class="row">
+                        <h1>Desktop, tablet, mobile</h1>
+                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                    </div>
+                    <div class="row">
+                        <h1>Offset</h1>                            
+                        <div class="col-md-3 col-md-offset-3">col-md-offset-3</div>
+                    </div>
+                    <div class="row">
+                        <h1>Responsive utilities</h1>
+                        <div class="visible-xs">Phones (<768px)</div>
+                        <div class="visible-sm">Tablets </div>
+                        <div class="visible-md">Desktop </div>
+                        <div class="visible-lg">Maiores </div>
+                    </div>
+                </div>
+            </section> <!-- tipos de grid -->      
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Básico</h1>
+                        <form>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email..">                            
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Password..">                            
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">Check me out                                
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <h1>Inline</h1>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" placeholder="Nome..">                            
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email..">                            
+                            </div>
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section> <!-- tipos de Formularios -->  
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Buttons</h1>
+                        <button type="submit" class="btn btn-default">Default</button>
+                        <button type="submit" class="btn btn-primary">Primary</button>
+                        <button type="submit" class="btn btn-success">Success</button>
+                        <button type="submit" class="btn btn-info">Info</button>
+                        <button type="submit" class="btn btn-warning">Warning</button>
+                        <button type="submit" class="btn btn-danger">Danger</button>
+                    </div>
+                    <div class="row">
+                        <h1>Sizes</h1>
+                        <button type="submit" class="btn btn-success btn-lg">Large</button>
+                        <button type="submit" class="btn btn-default">Success</button>
+                        <button type="submit" class="btn btn-danger btn-sm">Small</button>
+                        <button type="submit" class="btn btn-warning btn-xs">Extra Small</button>
+                    </div>
+                    <div class="row">
+                        <h1>Block Button</h1>
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Block Buttin</button>
+                    </div>
+                </div>
+            </section>  <!-- tipos de Botão --> 
+            
+            <section>
+                <div class="container">
+                    <div class="row text-center">
+                        <h1>Glyps Icons</h1>
+                        <p><span class="glyphicon glyphicon-search" aria-hidden="true"></span></p>
+                        <p><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true" style="font-size: 40px; color: blue "></span></p>
+                        <p><span class="glyphicon glyphicon-user text-warning" aria-hidden="true" style="font-size: 40px"></span></p>
+                        <p><button class="btn btn-success glyphicon glyphicon-ok" aria-hidden="true" style="font-size: 40px"></button></p>
+                    </div>
+                </div>
+            </section>  <!-- tipos de Ícones especiais --> 
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="dropdown">
+                            <h1>Dropdown</h1>
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Dropdown
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Ação</a></li>
+                                <li><a href="#">Outra ação</a></li>
+                                <li><a href="#">Algo mais aqui</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Link separado</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1>Dropup</h1>
+                        <div class="dropup">                        
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropup
+                                <span class="glyphicon glyphicon-list-alt"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">Ação</a></li>
+                                <li><a href="#">Outra ação</a></li>
+                                <li><a href="#">Algo mais aqui</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Link separado</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>  <!-- tipos de Dropdown e Dropup --> 
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Paginator</h1>
+                        <nav>
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Anterior">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a class="active" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Próximo">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+                        <h1>Paginator Large</h1>
+                        <nav>
+                            <ul class="pagination pagination-lg">
+                                <li>
+                                    <a href="#" aria-label="Anterior">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a class="active" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Próximo">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row">
+                        <h1>Paginator Small</h1>
+                        <nav>
+                            <ul class="pagination pagination-sm">
+                                <li class="disabled">
+                                    <a href="#" aria-label="Anterior">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a class="active" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Próximo">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>  <!-- tipos de Paginação --> 
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Listas</h1>
+                        <ul class="list-group">
+                            <li class="list-group-item">Texto Padrão</li>                            
+                            <li class="list-group-item">Texto Padrão</li>                            
+                            <li class="list-group-item">Texto Padrão</li>                            
+                        </ul>
+                    </div>
+                    <div class="row">
+
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="badge">98</span>
+                                Texto Padrão
+                            </li>
+                            <li class="list-group-item">
+                                <span class="badge">2</span>
+                                Texto Padrão
+                            </li>                            
+                            <li class="list-group-item">
+                                <span class="badge">47</span>
+                                Texto Padrão
+                            </li>                            
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">Link 1</a>
+                            <a href="#" class="list-group-item">Link 2</a>
+                            <a href="#" class="list-group-item">Link 3</a>
+                            <a href="#" class="list-group-item">Link 4</a>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- tipos de Listas --> 
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Tabs</h1>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Images</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <ul class="nav nav-pills">
+                        <li role="presentation" class="active"><a href="#">Home</a></li>
+                        <li role="presentation"><a href="#">Profile</a></li>
+                        <li role="presentation"><a href="#">Messages</a></li>
+                    </ul>
+                    <br>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" class="active"><a href="#">Home</a></li>
+                        <li role="presentation"><a href="#">Profile</a></li>
+                        <li role="presentation"><a href="#">Messages</a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <h1>Navegador Tab modo de Uso</h1>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#home" aria-controls="home" data-toggle="tab">Home</a></li>
+                            <li><a href="#images" aria-controls="images" data-toggle="tab">Images</a></li>
+                            <li><a href="#blog" aria-controls="blog" data-toggle="tab">Blog</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">Home</div>
+                            <div role="tabpanel" class="tab-pane" id="images">Images</div>
+                            <div role="tabpanel" class="tab-pane" id="blog">
+                                <div class="container">
+                                    <div class="row">
+                                        <h1>Grid System</h1>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                        <div class="col-md-1">col-md-1</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">col-md-6</div>
+                                        <div class="col-md-6">col-md-6</div>
+                                    </div>    
+                                    <div class="row">
+                                        <h1>Desktop, tablet, mobile</h1>
+                                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                                        <div class="col-md-3 col-sm-6 col-xs-12">col-md-3 col-sm-6 col-xs-12</div>
+                                    </div>
+                                    <div class="row">
+                                        <h1>Offset</h1>                            
+                                        <div class="col-md-3 col-md-offset-3">col-md-offset-3</div>
+                                    </div>
+                                    <div class="row">
+                                        <h1>Responsive utilities</h1>
+                                        <div class="visible-xs">Phones (<768px)</div>
+                                        <div class="visible-sm">Tablets </div>
+                                        <div class="visible-md">Desktop </div>
+                                        <div class="visible-lg">Maiores </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- tipos de Panels ou Abas/Guias --> 
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <h1>Modals</h1>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-backdrop="static" data-target="#mymodal">
+                            My Modal 
+                        </button>
+                        
+                        <div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Título do Modal</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Um teste de corpo de modal&hellip;</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <br>
+            <br>
+            <br>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
 </html>
